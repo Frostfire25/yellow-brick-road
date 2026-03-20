@@ -2,7 +2,7 @@
 
 An immersive 3D portfolio website inspired by *The Wizard of Oz*. Walk down the Yellow Brick Road in first-person and explore my education, skills, experience, and projects through themed Oz landmarks.
 
-**🔗 [Live Site](https://frostfire25.github.io/ResumePortfolio/)**
+**🔗 [Live Site](https://frostfire25.github.io/yellow-brick-road/)**
 
 ---
 
@@ -49,8 +49,8 @@ An immersive 3D portfolio website inspired by *The Wizard of Oz*. Walk down the 
 
 ```bash
 # Clone the repo
-git clone https://github.com/Frostfire25/ResumePortfolio.git
-cd ResumePortfolio
+git clone https://github.com/Frostfire25/yellow-brick-road.git
+cd yellow-brick-road
 
 # Install dependencies
 npm install
