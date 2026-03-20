@@ -7,6 +7,7 @@ import TinMan from "../zones/TinMan";
 import Lion from "../zones/Lion";
 import EmeraldCity from "../zones/EmeraldCity";
 import Environment from "./Environment";
+import PostProcessing from "../effects/PostProcessing";
 
 export default function Scene() {
   return (
@@ -45,6 +46,9 @@ export default function Scene() {
       <TinMan />
       <Lion />
       <EmeraldCity />
+
+      {/* Post-processing effects */}
+      <PostProcessing />
     </>
   );
 }
