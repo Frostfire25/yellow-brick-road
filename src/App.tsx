@@ -1,24 +1,10 @@
-import { Suspense, useCallback } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import Scene from "./components/Scene";
 import HUD from "./components/HUD";
-import LoadingScreen from "./components/LoadingScreen";
-import { useStore } from "./store/useStore";
+import WelcomeModal from "./components/WelcomeModal";
 
 export default function App() {
-  const hasStarted = useStore((s) => s.hasStarted);
-  const setHasStarted = useStore((s) => s.setHasStarted);
-  const setIsLoading = useStore((s) => s.setIsLoading);
-
-  const handleStart = useCallback(() => {
-    setHasStarted(true);
-    setIsLoading(false);
-  }, [setHasStarted, setIsLoading]);
-
-  if (!hasStarted) {
-    return <LoadingScreen onStart={handleStart} />;
-  }
-
   return (
     <>
       <Canvas
@@ -27,12 +13,12 @@ export default function App() {
         style={{ width: "100vw", height: "100vh" }}
         gl={{ antialias: true, alpha: false }}
       >
-        <color attach="background" args={["#87CEEB"]} />
-        <fog attach="fog" args={["#87CEEB", 30, 150]} />
+        <fog attach="fog" args={["#87CEEB", 40, 180]} />
         <Suspense fallback={null}>
           <Scene />
         </Suspense>
       </Canvas>
+      <WelcomeModal />
       <HUD />
     </>
   );
