@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emerald-glow: #50C878;
+  --color-ruby: #E0115F;
+  --color-gold: #FFD700;
+  --color-oz-sky: #87CEEB;
+  --color-sepia: #704214;
+  --color-kansas-brown: #8B7355;
+  --font-family-display: "Georgia", serif;
+  --font-family-body: "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  font-family: var(--font-family-body);
+}
+
+@keyframes ruby-sparkle {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-ruby-sparkle {
+  animation: ruby-sparkle 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
